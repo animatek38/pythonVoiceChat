@@ -13,6 +13,7 @@ t.start()
 
 while ip == ip:
     time.sleep(3)
+    t.start()
     print("[*] - Listening on","'",ip,"'","port","'",port,"'","...")
 
 while input("") != 'STOP':
