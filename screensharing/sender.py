@@ -10,7 +10,6 @@ port = 6969
 sender = ScreenShareClient(ip, port)
 
 t = threading.Thread(target=sender.start_stream)
-t.start()
 
 print("[!] - The receiver needs to put your ip to receive")
 
@@ -20,3 +19,11 @@ while input("") != 'STOP':
     continue
 
 sender.stop_stream()
+
+while True:
+    try:
+        t.start()
+    except:
+        continue
+    break
+    
