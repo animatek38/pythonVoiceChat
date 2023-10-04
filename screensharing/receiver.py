@@ -11,9 +11,11 @@ receiver = StreamingServer(ip, port)
 t = threading.Thread(target=receiver.start_server)
 t.start()
 
-while input("") != 'STOP':
+while ip == ip:
     time.sleep(3)
-    print("[*] - Listening on", port,"...")
+    print("[*] - Listening on","'",ip,"'","port","'",port,"'","...")
+
+while input("") != 'STOP':
     continue
 
 receiver.stop_server()
